@@ -14,5 +14,7 @@ command = "cargo test"
 
 [dependencies]
 anyhow = "1.0.100"
+serde = "1.0.225"
+serde_json = "1.0.145"
 [dev-dependencies]
 cargo-husky = "1.5.0"

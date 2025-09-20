@@ -3,4 +3,15 @@ name = "anyhow_learn"
 version = "0.1.0"
 edition = "2024"
 
+[package.metadata.husky]
+hooks = ["pre-commit", "pre-push"]
+
+[package.metadata.husky.pre-commit]
+command = "cargo fmt --all -- --check && cargo clippy --all-targets --all-features -- -D warnings"
+
+[package.metadata.husky.pre-push]
+command = "cargo test"
+
 [dependencies]
+[dev-dependencies]
+cargo-husky = "1.5.0"
